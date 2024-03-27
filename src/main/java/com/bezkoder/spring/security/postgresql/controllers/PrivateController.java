@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/private")
 public class PrivateController {
 
-    @GetMapping("/private/text")
+    @GetMapping("/text")
     public ResponseEntity<String> privateMessage(){
         return new ResponseEntity<>("Hi, this is private api for authorized", HttpStatus.OK);
     }
